@@ -201,6 +201,7 @@
             font-size: 3.2rem;
             margin-bottom: 20px;
             color: var(--white);
+            animation: fadeInDown 1s ease;
         }
 
         .hero p {
@@ -208,6 +209,7 @@
             max-width: 700px;
             margin: 0 auto 30px;
             color: var(--light-gray);
+            animation: fadeInUp 1s ease 0.3s both;
         }
 
         .hero-btns {
@@ -215,6 +217,7 @@
             gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
         }
 
         /* Section Headers */
@@ -296,7 +299,15 @@
             text-align: center;
             transition: var(--transition);
             border-top: 4px solid var(--primary-green);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
         }
+
+        .value-card:nth-child(1) { animation-delay: 0.1s; }
+        .value-card:nth-child(2) { animation-delay: 0.2s; }
+        .value-card:nth-child(3) { animation-delay: 0.3s; }
+        .value-card:nth-child(4) { animation-delay: 0.4s; }
 
         .value-card:hover {
             transform: translateY(-10px);
@@ -324,7 +335,17 @@
             text-align: center;
             transition: var(--transition);
             border: 1px solid var(--light-green);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
         }
+
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(5) { animation-delay: 0.5s; }
+        .service-card:nth-child(6) { animation-delay: 0.6s; }
 
         .service-card:hover {
             transform: translateY(-10px);
@@ -351,6 +372,7 @@
             border-radius: 12px;
             overflow: hidden;
             background: var(--white);
+            animation: fadeIn 1s ease;
         }
 
         .pricing-table th, .pricing-table td {
@@ -394,7 +416,17 @@
             height: 240px;
             position: relative;
             box-shadow: var(--shadow);
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeInScale 0.8s ease forwards;
         }
+
+        .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.2s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.3s; }
+        .gallery-item:nth-child(4) { animation-delay: 0.4s; }
+        .gallery-item:nth-child(5) { animation-delay: 0.5s; }
+        .gallery-item:nth-child(6) { animation-delay: 0.6s; }
 
         .gallery-item img {
             width: 100%;
@@ -435,6 +467,7 @@
             padding: 40px 30px;
             border-radius: 12px;
             box-shadow: var(--shadow);
+            animation: fadeInLeft 1s ease;
         }
 
         .contact-info h3 {
@@ -489,6 +522,7 @@
             padding: 40px 30px;
             border-radius: 12px;
             box-shadow: var(--shadow);
+            animation: fadeInRight 1s ease;
         }
 
         .form-group {
@@ -664,7 +698,15 @@
 
         .stat-item {
             padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
         }
+
+        .stat-item:nth-child(1) { animation-delay: 0.1s; }
+        .stat-item:nth-child(2) { animation-delay: 0.2s; }
+        .stat-item:nth-child(3) { animation-delay: 0.3s; }
+        .stat-item:nth-child(4) { animation-delay: 0.4s; }
 
         .stat-number {
             font-size: 3rem;
@@ -676,6 +718,71 @@
         .stat-text {
             font-size: 1.1rem;
             opacity: 0.9;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         /* Responsive Styles */
@@ -808,7 +915,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>Welcome to Umbutho Scrap Metals</h2>
-                    <p>With over 15 years of experience in the recycling industry, Umbutho Scrap Metals has established itself as a leader in sustainable metal recycling solutions. We specialize in collecting, processing, and recycling various types of metals, contributing to a cleaner environment while providing economic benefits to our clients.</p>
+                    <p>With years of experience in the recycling industry, Umbutho Scrap Metals has established itself as a leader in sustainable metal recycling solutions. We specialize in collecting, processing, and recycling various types of metals, contributing to a cleaner environment while providing economic benefits to our clients.</p>
                     <p>Our state-of-the-art facilities and dedicated team ensure that your scrap metals are handled with the utmost care and professionalism, maximizing returns while minimizing environmental impact.</p>
                     <a href="#" class="btn btn-primary" data-page="about">Learn More About Us</a>
                 </div>
@@ -854,7 +961,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Our Story</h3>
-                    <p>Founded in 2008, Umbutho Scrap Metals began as a small family business with a vision to create a sustainable future through responsible metal recycling. Over the years, we've grown into a trusted industry leader, serving both individual customers and commercial clients across the region.</p>
+                    <p>Umbutho Scrap Metals began as a small family business with a vision to create a sustainable future through responsible metal recycling. Over the years, we've grown into a trusted industry leader, serving both individual customers and commercial clients across the region.</p>
                     
                     <h3>Our Mission</h3>
                     <p>To provide efficient, reliable, and environmentally responsible metal recycling services that benefit our customers, community, and planet.</p>
@@ -862,9 +969,7 @@
                     <h3>Our Vision</h3>
                     <p>To be the leading force in sustainable metal recycling, driving innovation and setting new standards for environmental stewardship in our industry.</p>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1580745554057-5832e8fe04a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Umbutho Scrap Metals team">
-                </div>
+                
             </div>
 
             <div class="values-grid">
@@ -955,42 +1060,42 @@
                     <tr>
                         <td>Copper</td>
                         <td>Clean, uncoated copper wire and tubing</td>
-                        <td class="price">R 85.00</td>
+                        <td class="price">Price per market</td>
                     </tr>
                     <tr>
                         <td>Aluminum</td>
                         <td>Clean aluminum sheets, extrusions, and castings</td>
-                        <td class="price">R 25.50</td>
+                        <td class="price">Price per market</td>
                     </tr>
                     <tr>
                         <td>Stainless Steel</td>
                         <td>Non-magnetic stainless steel (304 & 316 grades)</td>
-                        <td class="price">R 18.75</td>
+                        <td class="price">Price per market</td>
                     </tr>
                     <tr>
                         <td>Brass</td>
                         <td>Clean brass fixtures, valves, and plumbing parts</td>
-                        <td class="price">R 45.20</td>
+                        <td class="price">Price per market</td>
                     </tr>
                     <tr>
                         <td>Lead</td>
                         <td>Clean lead sheets, pipes, and batteries</td>
-                        <td class="price">R 15.80</td>
+                        <td class="price">Price per market</td>
                     </tr>
                     <tr>
                         <td>Cast Iron</td>
                         <td>Heavy cast iron pieces and machinery parts</td>
-                        <td class="price">R 8.50</td>
+                        <td class="price">Price per market</td>
                     </tr>
                     <tr>
                         <td>Steel</td>
                         <td>Prepared steel scrap (cut to specified sizes)</td>
-                        <td class="price">R 6.25</td>
+                        <td class="price">Price per market</td>
                     </tr>
                     <tr>
                         <td>Mixed Metals</td>
                         <td>Assorted metal scrap requiring sorting</td>
-                        <td class="price">R 4.50</td>
+                        <td class="price">Price per market</td>
                     </tr>
                 </tbody>
             </table>
@@ -1012,53 +1117,11 @@
 
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://github.com/Skhulu9812/UmbuthoScrapMetals/blob/main/IMG-20250930-WA0010%20(1).jpg" alt="Scrap metal yard">
+                    <img src="https://github.com/Skhulu9812/UmbuthoScrapMetals/blob/main/IMG-20250930-WA0010%20(1).jpg?raw=true" alt="Our Recycling Facility">
                     <div class="gallery-overlay">
                         <h4>Our Recycling Facility</h4>
                     </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1577023311546-cdc07a8453d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Metal processing">
-                    <div class="gallery-overlay">
-                        <h4>Metal Processing</h4>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1580745554057-5832e8fe04a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Our team">
-                    <div class="gallery-overlay">
-                        <h4>Our Dedicated Team</h4>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Collection trucks">
-                    <div class="gallery-overlay">
-                        <h4>Collection Vehicles</h4>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1611273426961-0048dd4f58fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Sorted metals">
-                    <div class="gallery-overlay">
-                        <h4>Sorted Metals</h4>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1603712610496-5362a2c93c88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Recycling process">
-                    <div class="gallery-overlay">
-                        <h4>Recycling Process</h4>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1580745554057-5832e8fe04a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Weighing station">
-                    <div class="gallery-overlay">
-                        <h4>Weighing Station</h4>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1577023311546-cdc07a8453d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Finished products">
-                    <div class="gallery-overlay">
-                        <h4>Finished Products</h4>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -1068,66 +1131,70 @@
         <div class="container">
             <div class="page-header">
                 <h2>Contact Us</h2>
-                <p>Get in touch with us for all your metal recycling needs</p>
+                <p>Get in touch with us for inquiries, quotes, or to schedule a pickup</p>
             </div>
 
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
+                    <h3>Get In Touch</h3>
                     <div class="contact-details">
                         <div class="contact-detail">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
-                                <h4>Address</h4>
-                                <p>123 Recycling Road<br>Industrial Area<br>Durban, 4001</p>
+                                <h4>Our Location</h4>
+                                <p>123 Recycling Road, Industrial Area<br>Johannesburg, South Africa</p>
                             </div>
                         </div>
                         <div class="contact-detail">
-                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-phone-alt"></i>
                             <div>
-                                <h4>Phone</h4>
-                                <p>+27 (0) 31 123 4567</p>
+                                <h4>Phone Number</h4>
+                                <p>+27 11 123 4567</p>
                             </div>
                         </div>
                         <div class="contact-detail">
                             <i class="fas fa-envelope"></i>
                             <div>
-                                <h4>Email</h4>
-                                <p>info@umbuthoscrap.co.za</p>
+                                <h4>Email Address</h4>
+                                <p>info@umbuthoscrapmetals.co.za</p>
                             </div>
                         </div>
                         <div class="contact-detail">
                             <i class="fas fa-clock"></i>
                             <div>
-                                <h4>Operating Hours</h4>
-                                <p>Monday - Friday: 7:30 AM - 5:00 PM<br>Saturday: 8:00 AM - 1:00 PM<br>Sunday: Closed</p>
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 8:00 AM - 2:00 PM</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.238239827355!2d31.00788931511139!3d-29.948888281911423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a9f4d8d16f2d%3A0x7e3b6d4873e5b4c2!2sDurban%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.032656590864!2d28.044215315029093!3d-26.197183983442206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1b6c2d85e1%3A0x33c2cf9c2c49f1b1!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1641234567890!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
 
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formsubmit.co/siphesokhetye98@gmail.com" method="POST">
                         <div class="form-group">
-                            <label for="fullName">Full Name *</label>
-                            <input type="text" id="fullName" class="form-control" required>
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control">
+                            <input type="tel" id="phone" name="phone" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
@@ -1142,7 +1209,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Umbutho Scrap Metals</h3>
-                    <p>Your trusted partner in sustainable metal recycling for over 15 years. We're committed to environmental responsibility and customer satisfaction.</p>
+                    <p>Leading the way in sustainable metal recycling with a commitment to environmental responsibility and customer satisfaction.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1157,7 +1224,6 @@
                         <li><a href="#" data-page="about"><i class="fas fa-chevron-right"></i> About Us</a></li>
                         <li><a href="#" data-page="services"><i class="fas fa-chevron-right"></i> Services</a></li>
                         <li><a href="#" data-page="pricing"><i class="fas fa-chevron-right"></i> Pricing</a></li>
-                        <li><a href="#" data-page="gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
                         <li><a href="#" data-page="contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
                 </div>
@@ -1166,23 +1232,14 @@
                     <ul class="footer-links">
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Scrap Metal Collection</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Metal Recycling</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Metal Weighing</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Precise Weighing</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> Processing & Sorting</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> On-site Demolition</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> 123 Recycling Road, Durban</a></li>
-                        <li><a href="#"><i class="fas fa-phone"></i> +27 (0) 31 123 4567</a></li>
-                        <li><a href="#"><i class="fas fa-envelope"></i> info@umbuthoscrap.co.za</a></li>
-                        <li><a href="#"><i class="fas fa-clock"></i> Mon-Fri: 7:30AM-5:00PM</a></li>
-                    </ul>
-                </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Umbutho Scrap Metals. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: #ff6b6b;"></i> for a sustainable future</p>
+                <p>Thank you for choosing Umbutho Scrap Metals - Your partner in sustainable recycling</p>
             </div>
         </div>
     </footer>
@@ -1194,10 +1251,10 @@
         });
 
         // Page Navigation
-        document.querySelectorAll('.nav-link, .btn[data-page], .footer-links a[data-page]').forEach(link => {
+        document.querySelectorAll('.nav-link, .hero-btns a, .footer-links a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetPage = this.getAttribute('data-page');
+                const targetPage = this.getAttribute('data-page') || 'home';
                 
                 // Hide all pages
                 document.querySelectorAll('.page-content').forEach(page => {
@@ -1221,40 +1278,45 @@
             });
         });
 
-        // Contact Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('fullName').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-            
-            // Simple validation
-            if (!name || !email || !message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // In a real application, you would send this data to a server
-            // For this example, we'll just show a success message
-            alert('Thank you for your message, ' + name + '! We will get back to you soon.');
-            
-            // Reset form
-            this.reset();
-        });
-
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.padding = '5px 0';
-                header.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
             } else {
                 header.style.padding = '0';
-                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
             }
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real implementation, you would send the form data to the server
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.value-card, .service-card, .gallery-item, .stat-item').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
         });
     </script>
 </body>
